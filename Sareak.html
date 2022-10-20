@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="eu">
+<link rel="stylesheet" type="text/css" href="estilos.css">
+
+<meta charset="utf-8"/>
+
+<title>ivan gonzalez</title>
+
+</head>
+
+<body id="body">
+
+<div id="logotolosa">
+<img src="IRUDIAK/logotolosaldea.jpg" alt="tolosaldea logoa" width="150" height="100">
+</div>
+
+<h2 class="izena"> IVAN GONZALEZ </h2>
+<h1 class="lehenengo"><img src="IRUDIAK/gifg.gif" alt="gif"> </h1>
+
+
+<nav id="menu">
+	<ul>
+		<li><a href="index.html">HASIERA</a></li>
+		<li><a href="Hardware.html">HARDWARE</a></li>
+		<li><a href="Sareak.html">SAREAK</a></li>
+		<li><a href="Sistema-eragileak.html">SISTEMA ERAGILEAK</a></li>
+	</ul>
+</nav>
+
+<h1 class="izenburua"> SAREAK </h1>
+
+<div id="dok_sarea">
+<h1>RJ-45 kablea eginten.</h1>
+Tailerreko sarea testeatzea joan garenean, ikusi dugu “Connect” ematen zuela, baina 8tik bakarrik 7 puntu funtzionatzen zuten, horregatik,kablea aztertu ondoren, ikusi genuen RJ45 emeko kable bat gaizki zegoela.<br>
+ 
+Behin arazoa lokalizatuta zegoela, konpondu egin genuen RJ45 emea konponduz. Behin konprobaketa egin dugula, latigilo berri bat egin dugu, ordenagailutik rosetara joateko. Latigilo hau bi RJ45 arra edukiko ditu, ondorioz,
+<br>hurrengo materiala beharko dugu:
+<br>
+<br>
+<br>
+<img src="IRUDIAK/materiala.png" alt="sarea1">
+<br>
+<br>
+Lehenik eta behin cablea zurituko dugu
+<br>
+<br>
+<img src="IRUDIAK/cable2.jpg" width="350" height="350" alt="sarea2">
+<br>
+<br>
+ Ondoren kable bakoitza separatuko ditugu eta erdiko plastikitoa moztuko dugu
+<br>
+<br>
+<img src="IRUDIAK/cable1.jpg" width="350" height="350" alt="sarea3">
+<br>
+<br>
+Behin kableak separatuta dauzkagula,
+B eredua segituz, kableak ordenatuko
+ditugu
+<br>
+<br>
+<img src="IRUDIAK/cable3.jpg" width="350" height="350" alt="sarea4"> <img src="IRUDIAK/cable4.png" width="200" height="350" alt="sarea5">
+<br>
+<br>
+Behin kableak ordenatuta, baina
+Jarriko diogu.
+<br>
+<br>
+<img src="IRUDIAK/cable5.jpg" width="200" height="350" alt="sarea6"> <img src="IRUDIAK/cable6.jpg" width="200" height="350" alt="sarea7">
+<br>
+<br>
+Behein baina ondo jarrita, Sobratzen diren kableak moztuko ditugu
+<br>
+<br>
+<img src="IRUDIAK/cable7.jpg" width="400" height="350" alt="sarea8">
+<br>
+<br>
+Kable moztu ondoren Rj-45 arran sartuko Dugu beheraino eta krinpadorekin krinpatu egingo dugu
+<br>
+<br>
+<img src="IRUDIAK/cable8.jpg" width="400" height="350" alt="sarea9">
+<br>
+<br>
+<h3>KOMPROBAKETA</h3>
+<br>
+<br>
+
+Bukatzeko testerrekin bi RJ-45 arrak sartuko ditugu eta botoiari sakatuko diogu dena ondo dagoela konprobatzeko
+<br>
+<br>
+<img src="IRUDIAK/cable9.png" width="400" height="350" alt="sarea10">
+<br>
+<br>
+Azkenin gure ordenagailuan konektatu genuen eta koneksioa geneukala konprobatu genuen.<br><br>
+
+
+<u>Ondorioak</u><br><br>
+
+Hasieran gaizki sartu genuen kablea eta berriz egin behar izan genuen. Baino azkenik ondo atera zitzaigun.<br><br>
+
+Behin lan-fisiko guztia bukatu genuela, SSH konprobaketa bat egitera jarri ginen, honetarako bi ekipo behar izan genituen, ondorioz, Egoi eta Xabier lankideekin egin genuen. 
+<br>
+<br>
+<h3>SSH</h3>
+<br>
+<br>
+Lehenengo eta behin, ssh zerbitzaria eta bezeroa instalatu beharko dugu.<br><br>
+
+Gure kasuan gure ordenagailua zerbitzaria izango denez, hurrengo komandoak jarriko ditugu:<br><br>
+
+<em>sudo apt-get install openssh-server</em><br><br>
+
+Behin instalatuta dagoela, piztu egingo dugu, horretarako:<br><br>
+
+<em>sudo /etc/init.d/ssh start</em><br><br>
+
+Behin zerbitzaria instalatu dugula, bezeroa instalatuko dugu beste ekipoan, hurrengo komandoak jarrita:<br><br>
+
+<em>sudo apt-get install openssh-client</em><br><br>
+
+Behin instalatu dugula, komandoa jarriko dugu ISO-a tansferitzeko:<br><br>
+
+<em>scp /media/tellegoi/Datuak/ISO/Lubuntu.iso villarivan@192.168.1.201:/media/villarivan/Datuak</em><br><br>
+
+
+Jarraian gure ordenagailuko pasahitza jarriko dugu, eta tranferientzia hasiko da.<br><br>
+
+<img src="IRUDIAK/comando.png" width="600" height="80" alt="sarea11"><br><br>
+
+Behin prozesu guztia bukatu dugula, zerbitzaria itxiko dugu:<br><br>
+
+<em>sudo /etc/init.d/ssh stop</em><br><br>
+
+<h2>Ordenagailuen arteko datu-trasmisioa</h2>
+
+Jperf programarekin egin genuen. Lehenik eta behin bi ordenagailuak egindako
+kablearekin konektatuko ditugu, ondoren Jperf programa bi ordenagailutan irikiko
+ditugu eta batean server jarriko dugu eta bestean client.<br><br>
+
+<img src="IRUDIAK/sarea.png" width="600" height="180" alt="sarea12"><br><br>
+
+<img src="IRUDIAK/sarea2.png" width="600" height="180" alt="sarea13"><br><br>
+
+Ondoren MB-tan jarriko dugu eta client-en beste ordenagailuaren IP-a jarriko dugu<br><br>
+
+<img src="IRUDIAK/sarea3.png" width="600" height="300" alt="sarea14"><br><br>
+
+Bukatzeko bi ordenagailutan run-eri hemango diogu eta abiadura ikusiko dugu gure kasuan 38MByte/s-koa zen<br><br>
+
+<img src="IRUDIAK/sarea4.png" width="600" height="300" alt="sarea15"><br><br>
+
+</div>
+
+</body>
+</html>
+
